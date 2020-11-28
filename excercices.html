@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Excercices Ajax</title>
+</head>
+<body>
+    <h1>Afficher dans une liste le titre et rajouter le bouton qui permet de modifier et supprimer</h1>
+    <ol>
+        <li>Afficher la liste de tous les "Posts" au chargement de la page à partir de l'API</li>
+        <li>Afficher un "Post" au click (bouton afficher) à partir de l'API</li>
+        <li>Supprimer un "Post" au click (bouton supprimer) à partir de l'API</li>
+        <li>Ajouter un "Post" à l'aide de formulaire rendu visible au click (bouton ajouter) à partir de l'API</li>
+    </ol>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Liste des posts</th>
+            </tr>
+            <tr>
+                <th>Id du post</th>
+                <th>Titre du post</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            
+        </tbody>
+    </table>
+
+    <script>
+
+        //Variable qui sert à aller chercher les informations des posts
+        var request = new XMLHttpRequest();
+        request.open('GET', 'https://jsonplaceholder.typicode.com/posts');
+        request.onreadystatechange = function(){
+            if (request.readyState === 4 ){
+                var response = JSON.parse(request.responseText);
+            }
+        };
+        request.send();
+
+        //Fonction pour afficher la liste de tous les Posts
+        
+
+        //Fonction pour afficher un post en détail avec un bouton
+            
+    
+
+        //Fonction pour supprimer un post avec un bouton
+       
+
+        //Fonction pour ajouter un post à l'aide d'un formulaire rendu visible avec un bouton
+        
+
+    </script>
+</body>
+</html>
